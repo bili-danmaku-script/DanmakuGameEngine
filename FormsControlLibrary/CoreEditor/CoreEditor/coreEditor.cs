@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CoreEditor
 {
-    public partial class UserControl1: UserControl
+    public partial class coreEditor: UserControl
     {
-        public UserControl1()
+        public coreEditor()
         {
             InitializeComponent();
         }

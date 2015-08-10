@@ -1,6 +1,6 @@
 ﻿namespace CoreEditor
 {
-    partial class UserControl1
+    partial class coreEditor
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -30,11 +30,11 @@
         {
             this.SuspendLayout();
             // 
-            // UserControl1
+            // coreEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UserControl1";
+            this.Name = "coreEditor";
             this.Size = new System.Drawing.Size(236, 207);
             this.ResumeLayout(false);
 
