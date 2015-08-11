@@ -34,12 +34,18 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
+            this.DoubleBuffered = true;
+            this.ForeColor = System.Drawing.Color.White;
             this.Name = "coreEditor";
-            this.Size = new System.Drawing.Size(236, 207);
+            this.Size = new System.Drawing.Size(640, 480);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.coreEditor_Paint);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.coreEditor_MouseMove);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
     }
 }
