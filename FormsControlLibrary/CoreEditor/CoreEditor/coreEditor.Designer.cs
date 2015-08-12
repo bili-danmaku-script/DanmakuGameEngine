@@ -39,14 +39,13 @@
             this.ForeColor = System.Drawing.Color.White;
             this.Name = "CoreEditor";
             this.Size = new System.Drawing.Size(640, 480);
-            this.Paint += new System.Windows.Forms.PaintEventHandler(this.coreEditor_Paint);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CoreEditor_MouseClick);
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.coreEditor_MouseMove);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
 
     }
 }
