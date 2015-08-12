@@ -41,18 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="coreEditor.cs">
+    <Compile Include="CoreEditor.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="coreEditor.Designer.cs">
-      <DependentUpon>coreEditor.cs</DependentUpon>
+    <Compile Include="CoreEditor.Designer.cs">
+      <DependentUpon>CoreEditor.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="coreEditor.resx">
-      <DependentUpon>coreEditor.cs</DependentUpon>
+    <EmbeddedResource Include="CoreEditor.resx">
+      <DependentUpon>CoreEditor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

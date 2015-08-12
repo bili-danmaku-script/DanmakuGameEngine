@@ -1,6 +1,6 @@
 ﻿namespace CoreEditor
 {
-    partial class coreEditor
+    partial class CoreEditor
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -30,16 +30,17 @@
         {
             this.SuspendLayout();
             // 
-            // coreEditor
+            // CoreEditor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "coreEditor";
+            this.Name = "CoreEditor";
             this.Size = new System.Drawing.Size(640, 480);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.coreEditor_Paint);
+            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CoreEditor_MouseClick);
             this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.coreEditor_MouseMove);
             this.ResumeLayout(false);
 
