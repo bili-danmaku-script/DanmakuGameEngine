@@ -13,13 +13,17 @@ namespace CoreEditor
 {   
     public partial class CoreEditor: UserControl
     {
+        public enum RefreshMode { Interval, EnterFrame };
+        public enum CoordinateMode { }
+
+
         private int _mouseX;
         private int _mouseY;
 
         // Event
         public class ObjectSelectedEventArgs : EventArgs
         {
-
+            
         }
 
         private delegate void ObjectSelectedHandler(object sender, ObjectSelectedEventArgs e);
