@@ -1,6 +1,6 @@
-﻿namespace CoreEditor
+﻿namespace Designer
 {
-    partial class CoreEditor
+    partial class Designer
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -30,22 +30,18 @@
         {
             this.SuspendLayout();
             // 
-            // CoreEditor
+            // Designer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.White;
-            this.Name = "CoreEditor";
-            this.Size = new System.Drawing.Size(640, 480);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CoreEditor_MouseClick);
+            this.Name = "Designer";
+            this.Size = new System.Drawing.Size(320, 240);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-
     }
 }
