@@ -27,14 +27,16 @@ namespace Core
         public enum ScreenResolutions { None, Stretch, Zoom };
 
         private static Manager _instance = null;
-        private CoordinateModes _coordinateMode = CoordinateModes.UV;
-        private UpdateModes _updateMode = UpdateModes.enterFrame;
-        private ScreenResolutions _screenResolution = ScreenResolutions.None;
-        private ArrayList _pool = new ArrayList();
+        private CoordinateModes _coordinateMode;
+        private UpdateModes _updateMode;
+        private ScreenResolutions _screenResolution;
+        private List<GameObject> _pool = new List<GameObject>();
         
         private Manager()
         {
-
+            this._coordinateMode = CoordinateModes.UV;
+            this._updateMode = UpdateModes.enterFrame;
+            this._screenResolution = ScreenResolutions.None;
         }
 
         /// <summary>
@@ -105,6 +107,16 @@ namespace Core
         public void remove_object(GameObject gameObject)
         {
             this._pool.Remove(gameObject);
+        }
+
+        public void insert_object(GameObject gameObject, int index)
+        {
+            this._pool.Insert(index, gameObject);
+        }
+
+        public GameObject get_object(int index)
+        {
+            return this._pool[index];
         }
 
         /// <summary>
