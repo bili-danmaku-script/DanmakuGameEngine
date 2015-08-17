@@ -7,15 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Drawing.Drawing2D;
 using System.Runtime.InteropServices;
-
+using System.Drawing.Drawing2D;
 
 
 namespace DanmakuGameEngine
 {
-    public partial class main : Form
+   
+
+
+    public partial class Splash : Form
     {
+
+
         public const Int32 AW_HOR_POSITIVE = 0x00000001;
         public const Int32 AW_HOR_NEGATIVE = 0x00000002;
         public const Int32 AW_VER_POSITIVE = 0x00000004;
@@ -26,40 +30,18 @@ namespace DanmakuGameEngine
         public const Int32 AW_SLIDE = 0x00040000;
         public const Int32 AW_BLEND = 0x00080000;
 
-        Splash splash;
-        bool splashfinish = false;
-
-
         [DllImportAttribute("user32.dll")]
         private static extern bool AnimateWindow(IntPtr hwnd, int dwTime, int dwFlags);
-
-        public main()
+        public Splash()
         {
             InitializeComponent();
-            splash = new Splash();
-            splash.Show();
-            Visible = false;
-            this.ShowInTaskbar = false;
-           // AnimateWindow(this.Handle, 300, AW_BLEND);
-            
+            AnimateWindow(this.Handle, 300, AW_BLEND);
         }
 
-
-
-
-        [DllImport("user32.dll")]
-        public static extern bool ReleaseCapture();
-        [DllImport("user32.dll")]
-        public static extern bool SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
-        public const int WM_SYSCOMMAND = 0x0112;
-        public const int SC_MOVE = 0xF010;
-        public const int HTCAPTION = 0x0002;
-        private void main_MouseDown(object sender, System.Windows.Forms.MouseEventArgs e)
-        {//拖动窗体
-            ReleaseCapture();
-            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
+        private void Splash_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            AnimateWindow(this.Handle, 300, AW_HIDE + AW_BLEND);
         }
-
 
         public void SetWindowRegion()
         {
@@ -93,47 +75,9 @@ namespace DanmakuGameEngine
             path.CloseFigure();
             return path;
         }
-        private void main_Resize(object sender, EventArgs e)
+        private void Splash_Resize(object sender, EventArgs e)
         {
             SetWindowRegion();
-        }
-
-        private void main_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)Keys.Escape)
-                Close();
-        }
-
-        private void main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            AnimateWindow(this.Handle, 300, AW_HIDE + AW_BLEND);
-        }
-
-        private void main_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            if (!splashfinish)
-            {
-                splashfinish = true;
-                splash.Close();
-                this.WindowState = FormWindowState.Normal;
-                this.ShowInTaskbar = true;
-                //Visible = false;
-                //Hide();
-                AnimateWindow(this.Handle, 300, AW_BLEND);
-                //Show();
-                //Visible = true;
-                timer1.Enabled = false;
-            }
-        }
-
-        private void main_Shown(object sender, EventArgs e)
-        {
-          
         }
 
 

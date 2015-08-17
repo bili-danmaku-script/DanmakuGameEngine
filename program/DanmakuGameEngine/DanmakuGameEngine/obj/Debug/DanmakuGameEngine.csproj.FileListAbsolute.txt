@@ -1,1 +1,11 @@
 \\psf\Home\Documents\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\bin\Debug\DanmakuGameEngine.exe.config
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\bin\Debug\DanmakuGameEngine.exe.config
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\bin\Debug\DanmakuGameEngine.exe
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\bin\Debug\DanmakuGameEngine.pdb
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.csprojResolveAssemblyReference.cache
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.main.resources
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.Properties.Resources.resources
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.csproj.GenerateResource.Cache
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.exe
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.pdb
+F:\360data\重要数据\我的文档\GitHub\DanmakuGameEngine\program\DanmakuGameEngine\DanmakuGameEngine\obj\Debug\DanmakuGameEngine.Splash.resources
