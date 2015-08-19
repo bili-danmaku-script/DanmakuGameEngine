@@ -60,7 +60,16 @@ namespace DanmakuGameEngine
             SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
 
-
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                const int WS_MINIMIZEBOX = 0x00020000;  // Winuser.h中定义
+                CreateParams cp = base.CreateParams;
+                cp.Style = cp.Style | WS_MINIMIZEBOX;   // 允许最小化操作
+                return cp;
+            }
+        }
         public void SetWindowRegion()
         {
             System.Drawing.Drawing2D.GraphicsPath FormPath;
@@ -135,6 +144,37 @@ namespace DanmakuGameEngine
         {
           
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            switch(this.WindowState)
+            {
+                case FormWindowState.Normal:
+                    this.MaximumSize = new Size(Screen.PrimaryScreen.WorkingArea.Width, Screen.PrimaryScreen.WorkingArea.Height); 
+                    this.WindowState = FormWindowState.Maximized;
+                    break;
+                case FormWindowState.Maximized:
+                    this.WindowState = FormWindowState.Normal;
+                    break;
+            }
+        }
+
+        private void main_Activated(object sender, EventArgs e)
+        {
+
+        }
+
+       
 
 
     }
